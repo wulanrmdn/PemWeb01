@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image-picker</title>
+    
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: palevioletred;
+        }
+
+        .container {
+            display: flex;
+            margin: 50px 350px;
+            width: 500px;
+            height: 300px;
+        }
+
+        .box {
+            display: flex;
+            
+            width: 500px;
+            height: 300px;
+        }
+    </style>
+
+    <script>
+
+
+script>
+        function dekor1() {
+            dekor_1 = document.getElementById("home");
+            dekor_1.style.color = "aqua";
+        }
+
+        function dekor2() {
+            dekor_2 = document.getElementById("home");
+            dekor_2.style.color = "black";
+        }
+        
+        function imagepicker() {
+            const list_image = ["bali.jpg", "bandung.jpeg", "dieng.jpg", "jakarta.jpg", "jogja.jpg"]
+            let pilihan = document.getElementById("option");
+            if(pilihan.value == "Bali") {
+                let select = list_image[0];
+                document.getElementById("image").src = `images/${select}`
+                alert("Ini gambar bali.jpg")
+            }
+            
+
+            if(pilihan.value == "Bandung") {
+                let select = list_image[1];
+                document.getElementById("image").src = `images/${select}`
+                alert("Ini gambar bandung.jpeg")
+            }
+
+            if(pilihan.value == "Dieng") {
+                let select = list_image[2];
+                document.getElementById("image").src = `images/${select}`
+                alert("Ini gambar dieng.jpg")
+            }
+
+            if(pilihan.value == "Jakarta") {
+                let select = list_image[4];
+                document.getElementById("image").src = `images/${select}`
+                alert("Ini gambar jakarta.jpg")
+            
+            }
+
+            if(pilihan.value == "Jogja") {
+                let select = list_image[4];
+                document.getElementById("image").src = `images/${select}`
+                alert("Ini gambar jogja.jpg")
+            }
+
+           
+            
+            
+        }
+    </script>
+</head>
+<body>
+    <a href="" onmouseover="dekor1()" onmouseout="dekor2()" id="home"><h1>Image-picker wullan</h1></a>
+    <hr>
+    <br>
+    <select id="option" onchange="imagepicker()">
+        <option value="" selected>Pilih Gambar</option>
+        <option value="Bali">Bali</option>
+        <option value="Bandung">Bandung</option>
+        <option value="Dieng">Dieng</option>
+        <option value="Jakarta">Jakarta</option>
+        <option value="Jogja">Jogja</option>
+    </select>
+    <br>
+    <div class="container" id="container">
+        <div class="box" id="box">
+            <img id="image">
+        </div>
+    </div>
+
+
+</body>
+</html>
