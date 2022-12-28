@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wulan R Munawaroh</title>
+</head>
+<body>
+    <p>
+        <h3 style="color: pink;">Menghitung Jumlah <br> Dua
+            Bilangan Otomatis</h3>
+    </p>
+    <form name='hitungjlmh' method='post'>
+        <table>
+            <tr>
+                <td>Angka 1</td>
+                <td>:</td>
+                <td><input type='number' name='angka1' onchange='hitungjumlah();' placeholder="Input angka pertama">+</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Angka 2</td>
+                <td>:</td>
+                <td><input type='number' name='angka2' onchange='hitungjumlah();' placeholder="Input angka kedua">=</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Jumlah</td>
+                <td>:</td>
+                <td> <input type='text' name='jumlah' onchange='hitungjumlah();' placeholder="Jumlah"></td>
+            </tr>
+        </table>
+        
+    </form>
+    
+</body>
+<script type='text/javascript'>
+    function hitungjumlah() {
+        var angka1 = document.forms['hitungjlmh']['angka1'].value;
+        angka1 = parseInt(angka1);
+        var angka2 = document.forms['hitungjlmh']['angka2'].value;
+        angka2 = parseInt(angka2);
+        var jumlah = angka1 + angka2;
+        document.forms['hitungjlmh']['jumlah'].value = jumlah;
+    }
+</script>
+
+</html>
